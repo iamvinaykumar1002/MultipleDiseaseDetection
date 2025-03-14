@@ -1,0 +1,57 @@
+{% extends 'Base.html'%} {% block content%} {% if messages %} {% for message in messages %} {% if message.tags %}
+<script>
+    alert("{{ message }}")
+</script> {% endif %} {% endfor %} {% endif %} {%load static%}
+
+<style>
+    .box {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        padding-top: 20px;
+    }
+    
+    .box>div {
+        width: 600px;
+        height: auto;
+        border: 1px solid black;
+        padding: 10px;
+        border-radius: 10px;
+    }
+</style>
+<div style="background-image:  url('/media/bg1.jpg'); background-repeat:no-repeat;background-size:cover;  height:800px; width:100%;">
+    <br>
+    <br>
+    <br>
+    <br>
+    <div class="box">
+        <div style="background-color: #ece4e4;">
+            <h1>Post A Feedback/Query</h1>
+            <hr style="border: 1px solid black;">
+
+            <form method="POST" action="/give_feedback/" enctype="multipart/form-data">
+                {% csrf_token %}
+
+                <div class="row">
+                    <div class="col-md-12 mb-3">
+                        <label class="form-check-label">Ask Your Queries</label>
+                    </div>
+                    <br>
+
+                    <div class="col-md-12">
+                        <textarea rows="5" class="form-control" name="feedback" style="border:1px solid black;background-color: #ece4e4;"></textarea>
+                    </div>
+                </div>
+                <br>
+
+                <div class="row">
+                    <div style="text-align:center;" class="col-md-12">
+                        <input class="btn btn-primary" type="submit" value="Post Feedback">
+                    </div>
+                </div>
+            </form>
+
+        </div>
+    </div>
+</div>
+{% endblock %}
