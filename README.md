@@ -75,9 +75,9 @@ Multiple-Disease-Prediction/
 ## 📊 Machine Learning Models & Accuracy
 | ⚕️ Disease  | ⚙️ Algorithm  | 📊 Accuracy |
 |----------|-----------|----------|
-| 💜 Diabetes | Random Forest  | 99%  |
-| ❤️ Heart Disease | Random Forest | 99%  |
-| 🌟 Liver Disease | XGBoost | 100% |
+| 💜 Diabetes | Random Forest  | 85%  |
+| ❤️ Heart Disease | Random Forest | 70%  |
+| 🌟 Liver Disease | XGBoost | 80% |
 
 ## ✨ Future Enhancements
 - 🎮 Integration of **more diseases**.
